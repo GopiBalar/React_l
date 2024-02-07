@@ -1,8 +1,8 @@
 import "./App.css";
-import UseEffectExample2 from "./Components/HooksExample/Examples/useEffect/UseEffectExample2";
+import Main from "./Pages/Main";
 
 function App() {
-  return <UseEffectExample2 />;
+  return <Main />;
 }
 
 export default App;
