@@ -1,10 +1,13 @@
 import React from "react";
-// import Memodemo from "../Components/HooksExample/memoDemo/Memodemo";
-// import UseMemoProblem from "../Components/HooksExample/useMemo/UseMemoProblem";
-import UseMemoSolution from "../Components/HooksExample/useMemo/UseMemoSolution";
+import Component1 from "../Components/HooksExample/useContext/Component1";
+import Theme from "../Components/HooksExample/useContext/Theme";
 
 function Main() {
-  return <UseMemoSolution />;
+  return (
+    <Theme>
+      <Component1 />
+    </Theme>
+  );
 }
 
 export default Main;
