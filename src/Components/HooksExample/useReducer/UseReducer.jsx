@@ -1,12 +1,12 @@
 import React, { useReducer } from "react";
 
-const initialValue = 0;
-
 const ACTIONS = {
   INCREMENT: "increment",
   DECREMENT: "decrement",
   MULTI_INCREMENT: "multiIncrement",
 };
+
+const initialValue = 0;
 
 function reducer(count, action) {
   switch (action.type) {

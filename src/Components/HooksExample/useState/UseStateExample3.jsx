@@ -18,9 +18,9 @@ function UseStateExample3() {
     setFormValues({ ...formvalues, [e.target.name]: e.target.value });
   }
 
-  // function handlesubmit() {
-  //   setFruits({ ...fruits, ...formvalues });
-  // }
+  function handlesubmit() {
+    setFruits({ ...fruits, ...formvalues });
+  }
 
   return (
     <div className="containerOuter">
