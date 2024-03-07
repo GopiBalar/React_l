@@ -1,0 +1,28 @@
+.containerOuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 25px;
+  background-color: #f9fbe7;
+}
+
+.containerInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 2.5rem;
+  background-color: #e6ee9c;
+  border: 2px solid #afb42b;
+  border-radius: 25px;
+}
+
+.containerInner button {
+  font-size: 32px;
+  padding: 0.5rem 1rem;
+  border-radius: 25%;
+  border: none;
+  background-color: #afb42b;
+}

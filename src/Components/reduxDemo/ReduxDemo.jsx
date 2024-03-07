@@ -1,26 +1,30 @@
 import React from "react";
-import { restock, sell } from "../../redux/slices/cakeSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { restock, sell } from "../../redux/slices/cakeSlice";
+import styles from "../../styles/reduxDemo/reduxDemo.module.css";
 
 function ReduxDemo() {
   const cake = useSelector((state) => {
-    return state.cake;
+    return state.cakes;
   });
 
   const dispatch = useDispatch();
+
+  function decrement() {
+    dispatch(sell());
+  }
 
   function increment() {
     dispatch(restock(1));
   }
 
-  function decrement() {
-    dispatch(sell(1));
-  }
   return (
-    <div>
-      <button onClick={increment}>+</button>
-      <p>{cake.numberOfCakes}</p>
-      <button onClick={decrement}>- </button>
+    <div className={styles.containerOuter}>
+      <div className={styles.containerInner}>
+        <button onClick={decrement}>-</button>
+        <h2>Cakes : {cake.cakesNumber}</h2>
+        <button onClick={increment}>+</button>
+      </div>
     </div>
   );
 }
