@@ -3,7 +3,7 @@ import cakeReducer from "./slices/cakeSlice";
 import icecreamReducer from "./slices/icecreamSlice";
 
 const store = configureStore({
-  reducer: { cakes: cakeReducer, icecream: icecreamReducer },
+  reducer: { cakes: cakeReducer, icecreams: icecreamReducer },
 });
 
 export default store;

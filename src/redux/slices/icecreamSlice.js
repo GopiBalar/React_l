@@ -1,21 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  icecream: 0,
-};
-
 const icecreamSlice = createSlice({
   name: "icecream",
-  initialState,
+  initialState: { icrem: 0, cash: 100 },
   reducers: {
-    buy: (state, action) => {
-      state.icecream++;
+    sell: (state, action) => {
+      state.icrem--;
+      state.cash += 10;
     },
-    sale: (state, action) => {
-      state.icecream--;
+    restock: (state, action) => {
+      state.icrem += action.payload;
+      const cost = action.payload * 7;
+      state.cash -= cost;
     },
   },
 });
 
-export const { buy, sale } = icecreamSlice.actions;
+export const { sell, restock } = icecreamSlice.actions;
 export default icecreamSlice.reducer;
