@@ -25,7 +25,7 @@ function PostCard(props) {
       <div>
         <h3 style={{ fontSize: "2rem" }}>{props.title}</h3>
       </div>
-      <div style={{fontSize:"1.3rem"}}>
+      <div style={{ fontSize: "1.3rem" }}>
         <p>{props.body}</p>
       </div>
     </div>

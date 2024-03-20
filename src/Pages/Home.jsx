@@ -1,9 +1,17 @@
-import React from 'react';
-import Masale from "../Components/home/Masale";
+import React from "react";
+import Navbar from "../Components/classComponents/Navbar";
+import Class from "../Components/classComponents/Class";
+import Counter from "../Components/classComponents/Counter";
 
 function Home() {
-   
-  return <Masale/>;
+  return (
+    <div>
+      <Navbar />
+      <Class name="Gopi"  />
+      {/* <Class name="Balar" /> */}
+      <Counter />
+    </div>
+  );
 }
 
 export default Home;

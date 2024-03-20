@@ -24,10 +24,10 @@ function UseEffectExample() {
         width: "100vw",
         display: "flex",
         alignItems: "center",
-        justifyContent:"center",
-        color:"white",
-        fontSize:"50px",
-        fontWeight:"bold"
+        justifyContent: "center",
+        // color:"white",
+        fontSize: "50px",
+        fontWeight: "bold",
       }}
     >
       {count}

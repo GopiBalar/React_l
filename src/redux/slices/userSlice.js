@@ -10,7 +10,7 @@ export const fetchUsers = createAsyncThunk("user/fetchUsers", async () => {
   try {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await res.json();
-    return data[0].name;
+    return data[0].address.street;
   } catch (error) {
     return error;
   }
@@ -23,7 +23,7 @@ const userSlice = createSlice({
     getUser: () => {},
   },
   extraReducers: (builder) => {
-    const obj = builder
+    builder
       .addCase(fetchUsers.pending, (state, action) => {
         state.loading = true;
       })
@@ -38,8 +38,8 @@ const userSlice = createSlice({
         state.error = action.payload;
       });
 
-    console.log("obj", obj);
-    return obj;
+    // console.log("obj", obj);
+    // return obj;
   },
 });
 

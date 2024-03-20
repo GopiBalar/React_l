@@ -8,7 +8,7 @@ export function useUser() {
 }
 
 function User(props) {
-  const [user, setUser] = useState(" User");
+  const [user, setUser] = useState("User");
 
   return (
     <UserContext.Provider value={user}>

@@ -26,8 +26,8 @@ import Component2 from "./Component2";
 import { useTheme } from "./Theme";
 // import User from "./User";
 
-function Component1() {
-  const { theme, setTheme } = useTheme();
+function Component1(props) {
+  const { theme, setTheme } = props;
   console.log("theme", theme);
 
   const dStyles = {
@@ -39,26 +39,26 @@ function Component1() {
 
   return (
     // <User>
-      <div style={dStyles}>
-        <Component2 />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
-          dolorum? Repellendus itaque officia provident tempore distinctio. Iure
-          eveniet, modi commodi illum aspernatur architecto atque, quos
-          perferendis velit harum fugit voluptatum?
-        </p>
-        <button
-          onClick={() => {
-            if (theme === "light") {
-              setTheme("dark");
-            } else {
-              setTheme("light");
-            }
-          }}
-        >
-          Change Theme
-        </button>
-      </div>
+    <div style={dStyles}>
+      <Component2 />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+        dolorum? Repellendus itaque officia provident tempore distinctio. Iure
+        eveniet, modi commodi illum aspernatur architecto atque, quos
+        perferendis velit harum fugit voluptatum?
+      </p>
+      <button
+        onClick={() => {
+          if (!theme) {
+            setTheme("dark");
+          } else {
+            setTheme("light");
+          }
+        }}
+      >
+        Change Theme
+      </button>
+    </div>
     // {/* </User> */}
   );
 }
