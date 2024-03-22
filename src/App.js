@@ -14,16 +14,18 @@
 // export default App;
 
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home";
+import Main from "./Pages/Main";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //   </Routes>
+    // </BrowserRouter>
+    <div>
+      <Main />
+    </div>
   );
 }
 
